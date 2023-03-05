@@ -1,4 +1,5 @@
 import 'package:apartment_housting/Models/app_constants.dart';
+import 'package:apartment_housting/Screens/personalInfoPage.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -70,12 +71,14 @@ class _AccountPageState extends State<AccountPage> {
             shrinkWrap: true,
             children: <Widget>[
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, personalInfoPage.routeName);
+                },
                 child: AccountPageListTile(text: "Personal information", iconData: Icons.person,),
               ),
               MaterialButton(
                 onPressed: () {},
-                child: AccountPageListTile(text: "Become an ally", iconData: Icons.home,),
+                child: AccountPageListTile(text: "Put up an offer", iconData: Icons.home,),
               ),
               MaterialButton(
                 onPressed: _logout,

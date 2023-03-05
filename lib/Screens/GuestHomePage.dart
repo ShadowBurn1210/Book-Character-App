@@ -26,7 +26,7 @@ class GuestHomePage extends StatefulWidget {
 
 class _GuestHomePageState extends State<GuestHomePage> {
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 0; // initial page were it goes
 
   final List<String> pageTitles = [
     "Explore",

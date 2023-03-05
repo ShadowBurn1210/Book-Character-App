@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:apartment_housting/Models/app_constants.dart';
 import 'package:apartment_housting/Screens/GuestHomePage.dart';
 import 'package:apartment_housting/Screens/LoginPage.dart';
+import 'package:apartment_housting/Screens/personalInfoPage.dart';
 import 'package:apartment_housting/Screens/signUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName: (context) => LoginPage(title: "Log in",),
         SignUpPage.routeName: (context) => SignUpPage(title: "Sign Up",),
         GuestHomePage.routeName: (context) => GuestHomePage(title: "Home Page",),
+        personalInfoPage.routeName: (context) => personalInfoPage(title: "Personal Info",),
       },
     );
   }
