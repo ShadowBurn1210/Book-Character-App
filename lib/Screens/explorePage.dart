@@ -17,7 +17,7 @@ class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-            padding: const EdgeInsets.fromLTRB(25,25,25,0),
+            padding: const EdgeInsets.fromLTRB(25,15,25,0),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -39,16 +39,17 @@ class _ExplorePageState extends State<ExplorePage> {
 
                   ),
                   Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: GridView.builder(
-                              itemCount: 1,
-                              shrinkWrap: true,
-                              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 1,
-                                childAspectRatio: 4/5
-                                ),
-                              itemBuilder: (context, index) {
-                                  return PostingGridTile(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: GridView.builder(
+                      physics: ScrollPhysics(),
+                      itemCount: 2,
+                      shrinkWrap: true,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 1,
+                        childAspectRatio: 4/5
+                        ),
+                      itemBuilder: (context, index) {
+                          return TripGridTile(
                     );
                 },
               ),

@@ -30,16 +30,16 @@ class _GuestHomePageState extends State<GuestHomePage> {
 
   final List<String> pageTitles = [
     "Explore",
-    "Saved",
-    "Anime",
+    "Favorite",
+    "Series",
     "Inbox",
     "Profile"
   ];
 
   final List<Widget> _pages = [
     ExplorePage(title: "Explore Page"),
-    SavedPage(title: "Saved Page"),
-    AnimePage(title: "Anime Page"),
+    SavedPage(title: "Favorite Characters Page"),
+    AnimePage(title: "Series/Book Page"),
     InboxPage(title: "Inbox Page"),
     AccountPage(title: "Account Page"),
   ];
