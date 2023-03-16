@@ -1,4 +1,4 @@
-import 'package:apartment_housting/Models/app_constants.dart';
+import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:apartment_housting/Screens/GuestHomePage.dart';
 import 'package:apartment_housting/Screens/signUpPage.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Icon(
-                Icons.apartment,
+                Icons.tv,
                 size: 60,
               ),
               Text(

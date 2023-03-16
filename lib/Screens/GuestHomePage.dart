@@ -1,10 +1,10 @@
-import 'package:apartment_housting/Models/app_constants.dart';
+import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:apartment_housting/Screens/accountPage.dart';
 import 'package:apartment_housting/Screens/explorePage.dart';
 import 'package:apartment_housting/Screens/inboxPage.dart';
 import 'package:apartment_housting/Screens/savedPage.dart';
 import 'package:apartment_housting/Screens/signUpPage.dart';
-import 'package:apartment_housting/Screens/guildPage.dart';
+import 'package:apartment_housting/Screens/animePage.dart';
 import 'package:apartment_housting/Views/TextWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -31,7 +31,7 @@ class _GuestHomePageState extends State<GuestHomePage> {
   final List<String> pageTitles = [
     "Explore",
     "Saved",
-    "Apartment",
+    "Anime",
     "Inbox",
     "Profile"
   ];
@@ -39,7 +39,7 @@ class _GuestHomePageState extends State<GuestHomePage> {
   final List<Widget> _pages = [
     ExplorePage(title: "Explore Page"),
     SavedPage(title: "Saved Page"),
-    AppartmentPage(title: "Apartment Page"),
+    AnimePage(title: "Anime Page"),
     InboxPage(title: "Inbox Page"),
     AccountPage(title: "Account Page"),
   ];
@@ -71,7 +71,7 @@ class _GuestHomePageState extends State<GuestHomePage> {
         items: <BottomNavigationBarItem>[
           _buildNavigationItem(0, Icons.search, pageTitles[0]),
           _buildNavigationItem(1, Icons.favorite_border,  pageTitles[1]),
-          _buildNavigationItem(2, Icons.apartment,  pageTitles[2]),
+          _buildNavigationItem(2, Icons.tv,  pageTitles[2]),
           _buildNavigationItem(3, Icons.message,  pageTitles[3]),
           _buildNavigationItem(4, Icons.person_outline,  pageTitles[4]),
         ],

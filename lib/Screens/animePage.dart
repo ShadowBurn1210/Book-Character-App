@@ -1,23 +1,23 @@
 import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:flutter/material.dart';
 
-class SavedPage extends StatefulWidget {
+class AnimePage extends StatefulWidget {
 
-  SavedPage({super.key, required this.title});
+  AnimePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<SavedPage> createState() => _SavedPageState();
+  State<AnimePage> createState() => _AnimePageState();
 }
 
-class _SavedPageState extends State<SavedPage> {
+class _AnimePageState extends State<AnimePage> {
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-          "Saved Page"
+          "Anime Page"
       ),
     );
   }

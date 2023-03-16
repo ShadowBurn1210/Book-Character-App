@@ -1,4 +1,4 @@
-import 'package:apartment_housting/Models/app_constants.dart';
+import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:flutter/material.dart';
 
 class InboxPage extends StatefulWidget {

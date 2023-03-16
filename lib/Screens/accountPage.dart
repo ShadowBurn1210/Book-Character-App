@@ -1,5 +1,6 @@
-import 'package:apartment_housting/Models/app_constants.dart';
+import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:apartment_housting/Screens/personalInfoPage.dart';
+import 'package:apartment_housting/Screens/viewProfilePage.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,9 @@ class _AccountPageState extends State<AccountPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, viewProfilePage.routeName);
+                  },
                   child: CircleAvatar(
                     backgroundColor: Colors.black,
                     radius: MediaQuery.of(context).size.width/5.75,
@@ -78,7 +81,7 @@ class _AccountPageState extends State<AccountPage> {
               ),
               MaterialButton(
                 onPressed: () {},
-                child: AccountPageListTile(text: "Put up an offer", iconData: Icons.home,),
+                child: AccountPageListTile(text: "Best quotes", iconData: Icons.menu_book_outlined,),
               ),
               MaterialButton(
                 onPressed: _logout,

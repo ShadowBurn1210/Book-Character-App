@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fictional characters',
+      title: 'Anime characters',
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
-      home: const MyHomePage(title: 'Fictional character app'),
+      home: const MyHomePage(title: 'Anime character app'),
       routes: {
         LoginPage.routeName: (context) => LoginPage(title: "Log in",),
         SignUpPage.routeName: (context) => SignUpPage(title: "Sign Up",),
@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
-              Icons.person,
+              Icons.apartment,
               size: 120,
             ),
             Padding(
