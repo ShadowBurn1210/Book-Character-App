@@ -18,6 +18,8 @@ class finishedBookPage extends StatefulWidget {
 }
 
 class _finishedBookPageState extends State<finishedBookPage> {
+  CalendarFormat _calendarFormat = CalendarFormat.month;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,18 +53,18 @@ class _finishedBookPageState extends State<finishedBookPage> {
                 focusedDay: DateTime.now(),
                 availableGestures: AvailableGestures.all,
 
-              //   onDaySelected: (selectedDay, focusedDay) {
-              //     setState(() {
-              //       var _selectedDay = selectedDay;
-              //       var _focusedDay = focusedDay; // update `_focusedDay` here as well
-              //     });
-              //   },
-              //   calendarFormat: _calendarFormat,
-              //   onFormatChanged: (format) {
-              //     setState(() {
-              //       _calendarFormat = format;
-              //     });
-              //   },
+                onDaySelected: (selectedDay, focusedDay) {
+                  setState(() {
+                    var _selectedDay = selectedDay;
+                    var _focusedDay = focusedDay; // update `_focusedDay` here as well
+                  });
+                },
+                calendarFormat: _calendarFormat,
+                onFormatChanged: (format) {
+                  setState(() {
+                    _calendarFormat = format;
+                  });
+                },
               ),
             ),
             MaterialButton(
