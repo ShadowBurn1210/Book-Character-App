@@ -15,10 +15,14 @@ class _InboxPageState extends State<InboxPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-          "Inbox Page"
-      ),
+    return ListView.builder(
+      itemCount: 2,
+      itemExtent: MediaQuery.of(context).size.height/7,
+      itemBuilder: (context, index){
+        return Container(
+
+        );
+      }
     );
   }
 }

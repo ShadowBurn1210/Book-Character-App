@@ -9,8 +9,10 @@ class CircleAvatars extends StatelessWidget {
   final int divider1;
   final int divider2;
   final String image;
+  final String episode;
 
-  CircleAvatars({super.key, required this.text, required this.divider1, required this.divider2, required this.image});
+
+  CircleAvatars({super.key, required this.text,required this.episode, required this.divider1, required this.divider2, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,12 @@ class CircleAvatars extends StatelessWidget {
                 text,
                 style: TextStyle(
                   fontSize: 20,
+                ),
+              ),
+              AutoSizeText(
+                episode,
+                style: TextStyle(
+                  fontSize: 14,
                 ),
               ),
             ],

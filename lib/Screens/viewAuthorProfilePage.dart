@@ -6,19 +6,19 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:apartment_housting/Views/formWidget.dart';
 import '../Views/listWidgets.dart';
 
-class viewProfilePage extends StatefulWidget {
+class viewAuthorProfilePage extends StatefulWidget {
 
-  static final String routeName = "/viewProfilePageRoute";
+  static final String routeName = "/viewAuthorProfilePageRoute";
 
-  viewProfilePage({super.key, required this.title});
+  viewAuthorProfilePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<viewProfilePage> createState() => _viewProfilePageState();
+  State<viewAuthorProfilePage> createState() => _viewAuthorProfilePageState();
 }
 
-class _viewProfilePageState extends State<viewProfilePage> {
+class _viewAuthorProfilePageState extends State<viewAuthorProfilePage> {
 
   @override
   Widget build(BuildContext context) {
@@ -41,14 +41,14 @@ class _viewProfilePageState extends State<viewProfilePage> {
                       backgroundColor: Colors.black,
                       radius: MediaQuery.of(context).size.width/5.75,
                       child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/Kaneki.jpg"),
+                        backgroundImage: AssetImage("assets/images/brandon.jpg"),
                         radius: MediaQuery.of(context).size.width/6,
                       ),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 1 / 2,
                       child: AutoSizeText(
-                          "Ken Kaneki",
+                          "Brandon Sanderson",
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
@@ -70,7 +70,7 @@ class _viewProfilePageState extends State<viewProfilePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0),
-                  child: AutoSizeText("If you were to write a story with me in the lead role, it would certainly be... a tragedy.",
+                  child: AutoSizeText("American author of high fantasy and science fiction. He is best known for the Cosmere fictional universe",
                       style: TextStyle(
                       fontSize: 18
                   ),
@@ -94,7 +94,7 @@ class _viewProfilePageState extends State<viewProfilePage> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: AutoSizeText(
-                          "Lives in Tokyo, Japan",
+                          "Lives in Utah, USA",
                           style: TextStyle(
                               fontSize: 18
                           ),

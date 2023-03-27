@@ -1,6 +1,9 @@
 import 'package:apartment_housting/Models/appConstants.dart';
+import 'package:apartment_housting/Screens/signUpPage.dart';
 import 'package:apartment_housting/Views/gridWidgets.dart';
 import 'package:flutter/material.dart';
+
+import 'viewCharacterPage.dart';
 
 class ExplorePage extends StatefulWidget {
 
@@ -34,9 +37,7 @@ class _ExplorePageState extends State<ExplorePage> {
                     ),
                     style: TextStyle(
                       fontSize: 20.0,
-
                     ),
-
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
@@ -49,13 +50,23 @@ class _ExplorePageState extends State<ExplorePage> {
                         childAspectRatio: 4/5
                         ),
                       itemBuilder: (context, index) {
-                          return TripGridTile(
-                    );
-                },
+                          return InkResponse(
+                            enableFeedback: true,
+                            child: PostingGridTile(),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                  builder: (context) => new viewCharacterPage(title: 'Charecter Page',),
+                                ),
+                              );
+                            },
+                          );
+                          },
+                    ),
+                  ),
+                ],
               ),
-             ),
-            ],
-          ),
             ),
     );
   }

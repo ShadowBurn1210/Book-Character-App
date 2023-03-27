@@ -3,10 +3,14 @@ import 'package:apartment_housting/Models/appConstants.dart';
 import 'package:apartment_housting/Screens/GuestHomePage.dart';
 import 'package:apartment_housting/Screens/LoginPage.dart';
 import 'package:apartment_housting/Screens/personalInfoPage.dart';
+import 'package:apartment_housting/Screens/finishedBook.dart';
 import 'package:apartment_housting/Screens/signUpPage.dart';
+import 'package:apartment_housting/Screens/viewAuthorProfilePage.dart';
 import 'package:apartment_housting/Screens/viewProfilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+
+import 'Screens/viewCharacterPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,10 +29,14 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(title: 'Anime character app'),
       routes: {
         LoginPage.routeName: (context) => LoginPage(title: "Log in",),
+        viewCharacterPage.routeName: (context) => viewCharacterPage(title: "Characters Page",),
         SignUpPage.routeName: (context) => SignUpPage(title: "Sign Up",),
         GuestHomePage.routeName: (context) => GuestHomePage(title: "Home Page",),
         personalInfoPage.routeName: (context) => personalInfoPage(title: "Personal Info",),
         viewProfilePage.routeName: (context) => viewProfilePage(title: "View Profile",),
+        finishedBookPage.routeName: (context) => finishedBookPage(title: "Finished Book",),
+        viewAuthorProfilePage.routeName: (context) => viewAuthorProfilePage(title: "Author Profile",),
+
       },
     );
   }

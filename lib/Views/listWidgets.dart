@@ -77,5 +77,24 @@ class _ReviewListTileState extends State<ReviewListTile> {
       ],
     );
   }
+}
 
+
+class CoversationListTile extends StatefulWidget{
+
+  final String title;
+
+  CoversationListTile({super.key, required this.title})
+
+  @override
+  _CoversationListTileState createState() => _CoversationListTileState();
+}
+
+class _CoversationListTileState extends State<CoversationListTile> {
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 }

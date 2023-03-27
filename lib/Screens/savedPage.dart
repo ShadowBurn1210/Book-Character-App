@@ -1,7 +1,8 @@
 import 'package:apartment_housting/Models/appConstants.dart';
+import 'package:apartment_housting/Screens/viewProfilePage.dart';
 import 'package:flutter/material.dart';
-
 import '../Views/gridWidgets.dart';
+import 'viewCharacterPage.dart';
 
 class SavedPage extends StatefulWidget {
 
@@ -29,7 +30,18 @@ class _SavedPageState extends State<SavedPage> {
               childAspectRatio: 4/5
           ),
           itemBuilder: (context, index) {
-            return TripGridTile();
+            return InkResponse(
+              enableFeedback: true,
+              child: PostingGridTile(),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                    builder: (context) => new viewCharacterPage(title: 'Charecter Page',),
+                  ),
+                );
+              },
+            );
           },
         ),
       ),
