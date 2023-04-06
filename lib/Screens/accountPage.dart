@@ -1,4 +1,6 @@
 import 'package:apartment_housting/Models/appConstants.dart';
+import 'package:apartment_housting/Screens/GuestHomePage.dart';
+import 'package:apartment_housting/Screens/authorHomePage.dart';
 import 'package:apartment_housting/Screens/personalInfoPage.dart';
 import 'package:apartment_housting/Screens/viewProfilePage.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -18,8 +20,42 @@ class AccountPage extends StatefulWidget {
 
 class _AccountPageState extends State<AccountPage> {
 
+  String _hostingTitle = "Become an Author";
+
   void _logout() {
     Navigator.pushNamed(context, LoginPage.routeName);
+  }
+
+  void _changeAuthor() {
+    if (app_constants.isAuthor) {
+      app_constants.isAuthor = false;
+      Navigator.push(
+        context,
+        new MaterialPageRoute(
+            builder: (context) => new GuestHomePage(title: 'Home Page',)
+        ),
+      );
+    }else {
+      app_constants.isAuthor = true;
+      Navigator.push(
+        context,
+        new MaterialPageRoute(
+            builder: (context) => new authorHomePage(title: 'Home Page',)
+        ),
+      );
+    }
+  }
+
+  @override
+  void initState(){
+
+    if (app_constants.isAuthor){
+      _hostingTitle = "To Reader Dashboard";
+    } else {
+      _hostingTitle = "To Author Dashboard";
+    }
+
+    super.initState();
   }
 
   @override
@@ -80,8 +116,8 @@ class _AccountPageState extends State<AccountPage> {
                 child: AccountPageListTile(text: "Personal information", iconData: Icons.person,),
               ),
               MaterialButton(
-                onPressed: () {},
-                child: AccountPageListTile(text: "Best quotes", iconData: Icons.menu_book_outlined,),
+                onPressed: _changeAuthor,
+                child: AccountPageListTile(text: _hostingTitle, iconData: Icons.book,),
               ),
               MaterialButton(
                 onPressed: _logout,

@@ -79,6 +79,66 @@ class _ReviewListTileState extends State<ReviewListTile> {
   }
 }
 
+class MyPostingListTile extends StatefulWidget{
+
+  MyPostingListTile({super.key});
+
+  @override
+  _MyPostingListTileState createState() => _MyPostingListTileState();
+
+}
+
+class _MyPostingListTileState extends State<MyPostingListTile> {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      contentPadding: EdgeInsets.all(15.0),
+      leading: Padding(
+        padding: const EdgeInsets.only(left:25.0),
+        child: AutoSizeText(
+          "Main Protagonist",
+          maxLines: 2,
+          minFontSize: 20.0,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      trailing: AspectRatio(
+        aspectRatio: 3/2,
+        child: Image(
+          image: NetworkImage("https://picsum.photos/seed/picsum/300/200"), // Viņam ir assets image
+          fit: BoxFit.fitWidth,
+        ),
+      ),
+    );
+  }
+  
+}
+
+
+class CreateCharacterListTile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height /12,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.add),
+          Text(
+              "Create a posting",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+}
 
 
 

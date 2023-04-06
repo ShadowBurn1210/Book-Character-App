@@ -1,4 +1,6 @@
 import 'package:apartment_housting/Models/appConstants.dart';
+import 'package:apartment_housting/Screens/ConversationPage.dart';
+import 'package:apartment_housting/Screens/viewProfilePage.dart';
 import 'package:flutter/material.dart';
 
 class InboxPage extends StatefulWidget {
@@ -19,7 +21,16 @@ class _InboxPageState extends State<InboxPage> {
       itemCount: 2,
       itemExtent: MediaQuery.of(context).size.height/7,
       itemBuilder: (context, index){
-        return CoversationListTile(
+        return InkResponse(
+          child: CoversationListTile(),
+          onTap: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(
+            builder: (context) => new ConversationPage(title: 'Converations',)
+        ),
+          );
+        },
         );
       }
     );
@@ -40,9 +51,19 @@ class _CoversationListTileState extends State<CoversationListTile> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        backgroundImage: AssetImage("assets/images/mikeyS.jpeg"),
-        radius: MediaQuery.of(context).size.width /11.0,
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+                builder: (context) => new viewProfilePage(title: 'Profile Page',)
+            ),
+          );
+        },
+        child: CircleAvatar(
+          backgroundImage: AssetImage("assets/images/mikeyS.jpeg"),
+          radius: MediaQuery.of(context).size.width /11.0,
+        ),
       ),
       title: Text(
         "Mikey",

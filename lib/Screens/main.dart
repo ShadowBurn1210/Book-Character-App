@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'package:apartment_housting/Models/appConstants.dart';
+import 'package:apartment_housting/Screens/ConversationPage.dart';
 import 'package:apartment_housting/Screens/GuestHomePage.dart';
 import 'package:apartment_housting/Screens/LoginPage.dart';
 import 'package:apartment_housting/Screens/personalInfoPage.dart';
 import 'package:apartment_housting/Screens/signUpPage.dart';
 import 'package:apartment_housting/Screens/viewProfilePage.dart';
+import 'package:apartment_housting/Screens/authorHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
@@ -29,7 +31,8 @@ class MyApp extends StatelessWidget {
         GuestHomePage.routeName: (context) => GuestHomePage(title: "Home Page",),
         personalInfoPage.routeName: (context) => personalInfoPage(title: "Personal Info",),
         viewProfilePage.routeName: (context) => viewProfilePage(title: "View Profile",),
-        viewProfilePage.routeName: (context) => viewProfilePage(title: "Conversations",),
+        ConversationPage.routeName: (context) => ConversationPage(title: "Conversations",),
+        authorHomePage.routeName: (context) => authorHomePage(title: "Author Home Page",),
       },
     );
   }
